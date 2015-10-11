@@ -6,4 +6,7 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   body
+  = render :partial => '/menu'
+  .wrapper
+    .btn.glyphicon.glyphicon-menu-hamburger.menu-button data-toggle="modal" data-target="#menuModal"
     == yield
