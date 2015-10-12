@@ -15,6 +15,7 @@
  */
 
 $crowtec-green: #48FF6E;
+$crowtec-green-dark: #70AD47;
 $crowtec-dark-gray: #424242;
 $crowtec-light-gray: #4B4B4B;
 $crowtec-white: #FAFAFA;
@@ -24,6 +25,11 @@ $crowtec-white: #FAFAFA;
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "compass";
+/*******************************************/
+/*******************************************/
+              //GENERAL STYLES
+/*******************************************/
+/*******************************************/
 
 @import url(https://fonts.googleapis.com/css?family=Playfair+Display);
 $playfair-font: 'Playfair Display', serif;
@@ -34,10 +40,37 @@ body{
   font-family: $playfair-font;
   font-weight: bold;
 }
-
+.title-small{
+  font-size: 1.5em;
+  color: $crowtec-light-gray;
+  margin: 15px;
+}
+.title-medium{
+  font-size: 2em;
+  font-weight: bold;
+}
+.center-absolute{
+  position: relative;
+  top: 50%;
+}
+.half-up{
+  margin-top: -50%;
+}
+.text-green{
+  color: $crowtec-green;
+}
+.text-white{
+  color: $crowtec-white;
+}
+.text-gray{
+  color: $crowtec-dark-gray;
+}
+.bg-white{
+  background-color: $crowtec-white;
+}
 /*******************************************/
 /*******************************************/
-/*************      MENU   *****************/
+                  //MENU
 /*******************************************/
 /*******************************************/
 
@@ -89,6 +122,11 @@ body{
   color: $crowtec-dark-gray;
 
 }
+.menu-item:hover{
+  color: $crowtec-green;
+  text-decoration: none;
+  cursor: pointer;
+}
 .menu-item-description{
   background-color: $crowtec-dark-gray;
   opacity: .9;
@@ -106,30 +144,11 @@ body{
 
 /*******************************************/
 /*******************************************/
-      /******************************/
+                //IMPORTS
 /*******************************************/
 /*******************************************/
 
-
-.center-absolute{
-  position: relative;
-  top: 50%;
-}
-.half-up{
-  margin-top: -50%;
-}
-.text-green{
-  color: $crowtec-green;
-}
-.text-white{
-  color: $crowtec-white;
-}
-.text-gray{
-  color: $crowtec-dark-gray;
-}
-.bg-white{
-  background-color: $crowtec-white;
-}
 @import "welcome";
+@import "about";
 
 
