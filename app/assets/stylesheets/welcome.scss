@@ -19,6 +19,18 @@ img.background-image {
   height: 100%;
   z-index: -1;
 }
+
+.very-dark-overlay {
+  position: fixed;
+  background-color: rgba(0,0,0,0.8);
+  top: 0;
+  left: 0;
+
+  /* Preserve aspet ratio */
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
 .title{
   font-size: 5em;
   font-weight: bold;

@@ -26,12 +26,70 @@
           .col-md-12.text-center
             = image_tag "about/user.png"
   section.team.text-gray
-    .container-fluid
+    .container
       .col-md-12.title-small.text-center
         | THE TEAM
-      .col-md-4.picture
-      .col-md-8.description
+      .col-md-4.col-md-offset-8
+        ul.team-members
+          li#meriem.fa.fa-circle.fa-2x.circle-selected
+          li#rodrigo.fa.fa-circle.fa-2x
+          li#juanma.fa.fa-circle.fa-2x
+      .col-md-12.member.meriem
+        .col-md-4.picture
+          = image_tag "about/profile_pictures/meriem.jpg"
+        .col-md-8
+          .col-md-12.name.h2
+            | MERIEM EL YAMRI
+          .col-md-12.position.h3
+            |Co-founder | Computer Engineer
+          .col-md-12.description
+            |Y, viéndole don Quijote de aquella manera, con muestras de tanta tristeza, le dijo: Sábete, Sancho, que no es un hombre más que otro si no hace más que otro. Todas estas borrascas que nos suceden son señales de que presto ha de serenar el tiempo y han de sucedernos bien las cosas; porque no es posible que el mal ni el bien sean durables, y de aquí se sigue que, habiendo durado mucho el mal, el bien está ya cerca. Así que, no debes congojarte por las desgracias que a mí me suceden, pues a ti no te cabe parte dellas.Y, viéndole don Quijote de aquella manera, con muestras de tanta tristeza, le dijo: Sábete, Sancho, que no es un hombre más que otro si no hace más que otro. Todas estas borrascas que nos suceden son señales de que presto ha de serenar el tiempo y han de sucedernos bien las cosas
+          .col-md-12.email
+            a.h3 href="mailto:meriem@crowtec.eu" meriem@crowtec.eu
+      .col-md-12.member.rodrigo hidden=true
+        .col-md-4.picture
+          = image_tag "about/profile_pictures/rodrigo.jpg"
+        .col-md-8
+          .col-md-12.name.h2
+            | RODRIGO CRESPO
+          .col-md-12.position.h3
+            |Co-founder | Computer Engineer
+          .col-md-12.description
+            |Y, viéndole don Quijote de aquella manera, con muestras de tanta tristeza, le dijo: Sábete, Sancho, que no es un hombre más que otro si no hace más que otro. Todas estas borrascas que nos suceden son señales de que presto ha de serenar el tiempo y han de sucedernos bien las cosas; porque no es posible que el mal ni el bien sean durables, y de aquí se sigue que, habiendo durado mucho el mal, el bien está ya cerca. Así que, no debes congojarte por las desgracias que a mí me suceden, pues a ti no te cabe parte dellas.Y, viéndole don Quijote de aquella manera, con muestras de tanta tristeza, le dijo: Sábete, Sancho, que no es un hombre más que otro si no hace más que otro. Todas estas borrascas que nos suceden son señales de que presto ha de serenar el tiempo y han de sucedernos bien las cosas
+          .col-md-12.email
+            a.h3 href="mailto:rodrigo@crowtec.eu" rodrigo@crowtec.eu
+      .col-md-12.member.juanma hidden=true
+        .col-md-4.picture
+          = image_tag "about/profile_pictures/juanma.png"
+        .col-md-8
+          .col-md-12.name.h2
+            | JUAN MANUEL CARRERA
+          .col-md-12.position.h3
+            |Co-founder | Computer Engineer
+          .col-md-12.description
+            |Y, viéndole don Quijote de aquella manera, con muestras de tanta tristeza, le dijo: Sábete, Sancho, que no es un hombre más que otro si no hace más que otro. Todas estas borrascas que nos suceden son señales de que presto ha de serenar el tiempo y han de sucedernos bien las cosas; porque no es posible que el mal ni el bien sean durables, y de aquí se sigue que, habiendo durado mucho el mal, el bien está ya cerca. Así que, no debes congojarte por las desgracias que a mí me suceden, pues a ti no te cabe parte dellas.Y, viéndole don Quijote de aquella manera, con muestras de tanta tristeza, le dijo: Sábete, Sancho, que no es un hombre más que otro si no hace más que otro. Todas estas borrascas que nos suceden son señales de que presto ha de serenar el tiempo y han de sucedernos bien las cosas
+          .col-md-12.email
+            a.h3 href="mailto:juanma@crowtec.eu" juanma@crowtec.eu
+  section.footer.text-white
+    .container
+      .col-md-12.text-center.h2
+        |CROWTEC
+      .col-md-12.text-center
+        ul.social-media.text-center
+          li.fa.fa-facebook.fa-2x
+          li.fa.fa-twitter.fa-2x
+          li.fa.fa-google-plus.fa-2x
+          li.fa.fa-linkedin.fa-2x
+          li.fa.fa-youtube.fa-2x
 
-
-
+javascript:
+  $(".team-members li").click(function(){
+    $(".circle-selected").removeClass("circle-selected");
+    $(this).addClass("circle-selected");
+    var member = this.id;
+    // Hide all members
+    $(".member").hide();
+    // Show clicked member
+    $("." + member).show();
+  });
 

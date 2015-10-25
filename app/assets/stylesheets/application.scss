@@ -25,6 +25,7 @@ $crowtec-white: #FAFAFA;
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "compass";
+@import "font-awesome";
 /*******************************************/
 /*******************************************/
               //GENERAL STYLES
@@ -67,6 +68,16 @@ body{
 }
 .bg-white{
   background-color: $crowtec-white;
+}
+
+a, a:link, a:visited, a:active{
+  color: $crowtec-green-dark !important;
+  text-decoration: none;
+}
+a:hover{
+  color:$crowtec-green !important;
+  text-decoration: none;
+
 }
 /*******************************************/
 /*******************************************/
