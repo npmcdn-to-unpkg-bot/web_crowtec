@@ -31,6 +31,24 @@ img.background-image {
   height: 100%;
   z-index: -1;
 }
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+.gear{
+  color: $crowtec-green;
+  font-size: 1.3em;
+}
+.gear:hover {
+  -webkit-animation-name: rotate;
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+}
 .title{
   font-size: 5em;
   font-weight: bold;

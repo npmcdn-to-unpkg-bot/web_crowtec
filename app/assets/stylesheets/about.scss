@@ -23,22 +23,28 @@
   //margin for test purposes
   margin-top: 35%;
   background-color: $crowtec-green-dark;
-  border-color: darkgreen;
-  border-style: solid;
-  border-width: 10px 0px 10px 0px;
+  //border-color: darkgreen;
+  //border-style: solid;
+  //border-width: 10px 0px 10px 0px;
   font-size: 1.3em;
   *{
     padding: 20px;
   }
 }
 .team{
-  margin-top: 5%;
-  background-color: $crowtec-white;
-  border-color: $crowtec-dark-gray;
-  border-style: solid;
-  border-width: 10px 0px 10px 0px;
+  //margin-top: 20%;
+  background-color: $crowtec-dark-gray;
+  //border-color: $crowtec-dark-gray;
+  //border-style: solid;
+  //border-width: 10px 0px 10px 0px;
+}
+.team-title{
+  position:absolute;
+  bottom: 0%;
+  right: 5%;
 }
 ul.team-members{
+  padding-top: 15px;
   list-style-type: none;
   .fa-circle{
     color: $crowtec-green-dark;
@@ -64,9 +70,9 @@ ul.team-members{
   //margin for test purposes
   margin-top: 10%;
   background-color: $crowtec-green-dark;
-  border-color: darkgreen;
-  border-style: solid;
-  border-width: 10px 0px 0px 0px;
+  //border-color: darkgreen;
+  //border-style: solid;
+  //border-width: 10px 0px 0px 0px;
   font-size: 1.3em;
   *{
     padding: 20px;
