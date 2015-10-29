@@ -79,6 +79,9 @@ a:hover{
   text-decoration: none;
 
 }
+.no-margin{
+  margin: 0;
+}
 /*******************************************/
 /*******************************************/
                   //MENU
@@ -88,9 +91,10 @@ a:hover{
 
 .menu-button{
   left: 0;
-  font-size: 3em;
+  font-size: 2em;
   z-index: 1;
   color: $crowtec-white;
+
 }
 .menu-button:hover{
   color: $crowtec-light-gray;

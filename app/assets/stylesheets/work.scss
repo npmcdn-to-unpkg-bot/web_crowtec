@@ -5,19 +5,53 @@ img.background-image {
   /* Preserve aspet ratio */
   min-width: 100%;
   min-height: 100%;
+  width: 100%;
+  height: 100%;
   //@include filter (grayscale(100%) blur(5px));
+}
+.work-wrapper{
+  width: 100%;
+  height: 100%;
 }
 .project-card{
   background-color: rgba(255,255,255,0.4);
   color: $crowtec-dark-gray;
+  height: 100%;
   .card-image{
+    height: 100%;
     width: 100%;
+    background-size: cover;
+
   }
   .card-title{
-    margin-top: 0;
-    margin-bottom: 0;
+    position: absolute;
+    right: 10%;
+    top: 5%;
   }
+}
+.top-layer{
+  @include transition-property(opacity);
+  @include transition-duration(1s);
+  @include transition-timing-function(ease-in);
+  //visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  height: 100%;
+  background-color: $crowtec-dark-gray;
+
   &:hover{
-    background-color: $crowtec-white;
+    opacity: .7;
   }
+
+}
+.work-section{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30%;
+  left:0;
+  right: 0;
 }

@@ -1,13 +1,19 @@
 .work-wrapper
-  section.work-section.container
-    .grid
-      .row
-        .col-md-4.project-card
-          = image_tag "work/map.jpg", class: "card-image"
-          .h2.card-title GEOREP
-        .col-md-4.project-card
-          = image_tag "work/lights.jpg", class: "card-image"
-          .h2.card-title SMART LIGHTS
-        .col-md-4.project-card
-          = image_tag "work/ctos.png", class: "card-image"
-          .h2.card-title CTOS ENABLER
+  = image_tag "work/computer.jpg", class: "background-image"
+  section.work-section
+    .col-md-3.project-card
+      .top-layer
+        .h2.card-title.text-white georep
+      = image_tag "work/city.jpg", class: "card-image"
+    .col-md-3.project-card
+      = image_tag "work/lights.jpg", class: "card-image"
+      .top-layer
+        .h2.card-title.text-white smart lights
+    .col-md-3.project-card
+      = image_tag "work/world_map.jpg", class: "card-image"
+      .top-layer
+        .h2.card-title.text-white ctos enabler
+    .col-md-3.project-card
+      = image_tag "work/map.jpg", class: "card-image"
+      .top-layer
+        .h2.card-title.text-white map of history
