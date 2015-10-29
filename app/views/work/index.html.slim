@@ -1,2 +1,13 @@
-h1 Work#index
-p Find me in app/views/work/index.html.slim
+.work-wrapper
+  section.work-section.container
+    .grid
+      .row
+        .col-md-4.project-card
+          = image_tag "work/map.jpg", class: "card-image"
+          .h2.card-title GEOREP
+        .col-md-4.project-card
+          = image_tag "work/lights.jpg", class: "card-image"
+          .h2.card-title SMART LIGHTS
+        .col-md-4.project-card
+          = image_tag "work/ctos.png", class: "card-image"
+          .h2.card-title CTOS ENABLER

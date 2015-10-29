@@ -36,3 +36,5 @@ gem 'slim-rails'
 gem 'bootstrap-sass'
 gem 'font-awesome-rails'
 gem 'compass-rails'
+
+gem 'masonry-rails'

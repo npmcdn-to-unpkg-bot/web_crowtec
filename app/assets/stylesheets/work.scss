@@ -1,3 +1,23 @@
-// Place all the styles related to the work controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+img.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
+  //@include filter (grayscale(100%) blur(5px));
+}
+.project-card{
+  background-color: rgba(255,255,255,0.4);
+  color: $crowtec-dark-gray;
+  .card-image{
+    width: 100%;
+  }
+  .card-title{
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  &:hover{
+    background-color: $crowtec-white;
+  }
+}

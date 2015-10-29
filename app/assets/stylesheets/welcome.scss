@@ -1,13 +1,3 @@
-img.background-image {
-  position: fixed;
-  top: 0;
-  left: 0;
-
-  /* Preserve aspet ratio */
-  min-width: 100%;
-  min-height: 100%;
-  @include filter (grayscale(100%) blur(5px));
-}
 .dark-overlay {
   position: fixed;
   background-color: rgba(0,0,0,0.5);
@@ -41,7 +31,7 @@ img.background-image {
 }
 .gear{
   color: $crowtec-green;
-  font-size: 1.3em;
+  font-size: 2em;
 }
 .gear:hover {
   -webkit-animation-name: rotate;
@@ -50,9 +40,11 @@ img.background-image {
   -webkit-animation-timing-function: linear;
 }
 .title{
-  font-size: 5em;
+  position: absolute;
+  font-size: 2em;
+  bottom: 10%;
+  right: 10%;
   font-weight: bold;
-  margin-top: 5%;
 }
 .quote{
   font-size: 2em;
