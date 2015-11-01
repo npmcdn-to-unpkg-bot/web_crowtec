@@ -1,3 +1,19 @@
-// Place all the styles related to the awards controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.award-box{
+  width: 100%;
+  height: 200px;
+  background-color: $crowtec-white;
+}
+.media-box{
+  width: 100%;
+  min-height: 500px;
+  background-color: #EFEFEF;
+}
+.awards{
+  margin-top: 35%;
+}
+.awards-head{
+  margin-top: 15%;
+}
+.media{
+  background-color: $crowtec-white;
+}
