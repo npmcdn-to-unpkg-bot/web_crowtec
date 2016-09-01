@@ -1,0 +1,40 @@
+.buttons{
+  width: 100%;
+  margin-top: 70px;
+  text-align: center;
+  .button:first-child{
+    margin-right: 10px;
+  }
+}
+
+//TODO remove, just for test
+.contact-form{
+   width: calculatePercent(800px, $lg-width);
+   margin-top: 100px;
+   margin-left: calculatePercent(313px, $lg-width);
+
+}
+
+.input{
+  margin-bottom: 30px;
+
+  label{
+    width: 100%;
+    font-size: calculateRem(18px);
+    color: $text-white;
+    display: block;
+    text-align: left;
+  }
+  input{
+    min-width: calculatePercent(550px, $lg-width);
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid red;
+    min-height: 45px;
+    outline: 0;
+    font-family: 'Besom';
+    color: $text-white;
+    font-size: calculateRem(41px);
+
+  }
+}

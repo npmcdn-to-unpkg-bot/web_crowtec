@@ -1,0 +1,36 @@
+/* ========================================================================== */
+/* SIZES                                                                      */
+/* ========================================================================== */
+
+$font-size-base: 16px;
+
+$lg-width: 1440px;
+$md-width: 1024px;
+$sm-width: 768px;
+$xs-width: 320px;
+
+$navbar-height: 70px;
+
+
+/* ========================================================================== */
+/* COLORS                                                                     */
+/* ========================================================================== */
+
+@mixin transparent-background-color($rgba) {
+  $opaque: opacify($rgba, 1);
+  background-color: $opaque;  /* Fallback */
+  background-color: $rgba;
+}
+
+$text-white: white;
+$text-white-light: #e1e1e1;
+$text-red: #fb154a;
+$text-black: #000;
+$text-green: #00ff91;
+$text-gray: #666666;
+
+
+$bg-black: #020202;
+$bg-white: #fbfbfb;
+
+
