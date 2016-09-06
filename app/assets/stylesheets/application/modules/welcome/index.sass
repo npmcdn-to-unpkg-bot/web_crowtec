@@ -1,0 +1,69 @@
+.intro-wrapper
+  margin: 110px 0
+
+  .button-wrapper
+    margin-top: 160px
+
+  .semi-circle
+    @include translateY(50%)
+    position: absolute
+    bottom: 0
+    right: 0
+
+
+.works-wrapper
+  .project-item-wrapper
+    color: $text-black
+    position: relative
+
+    .project-image-wrapper
+      background: url("https://newevolutiondesigns.com/images/freebies/city-wallpaper-47.jpg") center no-repeat
+      position: absolute
+      height: 100%
+
+      //img
+        width: 100%
+
+    .project-description-wrapper
+      @media screen and (min-width: $tablet-width)
+        font-size: em(21px)
+
+      section
+        box-sizing: border-box
+        background: $bg-white
+        padding: 80px 70px
+
+        @media screen and (min-width: $tablet-width)
+          padding: 160px
+
+        p.description
+          margin-bottom: 2em
+          position: relative
+
+          &:before, &:after
+            @include translateX(-50%)
+            content: ""
+            background-color: $text-black
+            height: 1px
+            position: absolute
+            left: 50%
+            width: 20px
+
+          &:before
+            top: -1em
+
+          &:after
+            bottom: -1em
+
+      .btn
+        border-width: 7px
+        letter-spacing: em(16px)
+        padding-top: 35px
+        padding-bottom: 35px
+
+        @media screen and (min-width: $tablet-width)
+          border-width: 12px
+          letter-spacing: em(24px)
+          line-height: em(24px)
+          padding-top: 80px
+          padding-bottom: 80px

@@ -1,9 +1,16 @@
 @import 'compass';
 @import 'font-awesome';
 
-@import "application/globals/functions";
 @import "application/globals/variables";
+@import "application/globals/functions";
 @import 'application/globals/font';
 @import "application/globals/general";
+@import "application/globals/grid";
 
 @import "application/modules/form";
+@import "application/modules/partials/*";
+@import "application/modules/welcome/index";
+
+
+
+

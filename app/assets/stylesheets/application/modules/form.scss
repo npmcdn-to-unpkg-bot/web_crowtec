@@ -2,16 +2,16 @@
   width: 100%;
   margin-top: 70px;
   text-align: center;
-  .button:first-child{
+  .custom-button:first-child{
     margin-right: 10px;
   }
 }
 
 //TODO remove, just for test
 .contact-form{
-   width: calculatePercent(800px, $lg-width);
+   width: calculatePercent(800px, $desktop-width);
    margin-top: 100px;
-   margin-left: calculatePercent(313px, $lg-width);
+   margin-left: calculatePercent(313px, $desktop-width);
 
 }
 
@@ -20,13 +20,13 @@
 
   label{
     width: 100%;
-    font-size: calculateRem(18px);
+    font-size: em(18px);
     color: $text-white;
     display: block;
     text-align: left;
   }
   input{
-    min-width: calculatePercent(550px, $lg-width);
+    min-width: calculatePercent(550px, $desktop-width);
     background-color: transparent;
     border: 0;
     border-bottom: 1px solid red;
@@ -34,7 +34,7 @@
     outline: 0;
     font-family: 'Besom';
     color: $text-white;
-    font-size: calculateRem(41px);
+    font-size: em(41px);
 
   }
 }

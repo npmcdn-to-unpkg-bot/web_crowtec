@@ -1,0 +1,308 @@
+/* ========================================================================== */
+/* GENERAL STYLES
+/* ========================================================================== */
+
+html, body
+  -webkit-font-smoothing: antialiased
+  color: $text-white
+  background-color: $bg-black
+  //width: 100%
+  min-height: 100%
+  padding: 0
+  margin: 0
+  font-size: $font-size-base
+  font-family: 'Montserrat', sans-serif
+  text-rendering: optimizeLegibility !important
+
+  @media screen and (max-width: $tablet-width - 1)
+    font-size: $font-size-small
+
+
+/* ------------------------ */
+/* CSS Tables */
+/* ------------------------ */
+
+.table 
+  display: table
+
+.table-row
+  display: table-row
+
+.table-cell
+  display: table-cell
+
+/* ------------------------ */
+/* Floats wrappers */
+/* ------------------------ */
+
+.wrapper-clearfix 
+  overflow: auto
+
+  &:after 
+    content: " "
+    visibility: hidden
+    display: block
+    height: 0
+    clear: both
+
+.left 
+  float: left
+
+.right 
+  float: right
+
+.clear 
+  clear: both
+
+/* ------------------------ */
+/* Text aligns */
+/* ------------------------ */
+
+.text-right 
+  text-align: right
+  text-align: -webkit-right
+
+
+.text-left 
+  text-align: left
+  text-align: -webkit-left
+
+
+.text-center 
+  text-align: center
+  //text-align: -webkit-center
+  //text-align: -moz-center
+
+/* ------------------------ */
+/* Text transforms */
+/* ------------------------ */
+
+.text-uppercase
+  text-transform: uppercase
+
+/* ------------------------ */
+/* Text weights */
+/* ------------------------ */
+
+.text-thin
+  font-weight: 200
+
+.text-light
+  font-weight: 300
+
+.text-regular
+  font-weight: 400
+
+.text-bold
+  font-weight: 700
+
+.text-black
+  font-weight: 900
+
+/* ------------------------ */
+/* Text decorations */
+/* ------------------------ */
+
+.underline
+  text-decoration: underline
+
+/* ------------------------ */
+/* Display styles */
+/* ------------------------ */
+
+.hidden 
+  display: none
+
+.block 
+  display: block
+
+.inline 
+  display: inline
+
+.inline-block 
+  display: inline-block
+  margin-right: -4px
+
+/* ------------------------ */
+/* Vertical align */
+/* ------------------------ */
+
+.vertical-top 
+  vertical-align: top
+
+.vertical-middle 
+  vertical-align: middle
+
+.vertical-bottom 
+  vertical-align: bottom
+
+/* ------------------------ */
+/* Cursors */
+/* ------------------------ */
+
+.cursor-pointer 
+  cursor: pointer
+
+.cursor-default 
+  cursor: default
+
+/* ------------------------ */
+/* Positions */
+/* ------------------------ */
+
+.relative 
+  position: relative
+
+.absolute
+  position: absolute
+
+.fixed
+  position: fixed
+
+.absolute-center
+  @extend .absolute
+  @include translate(-50%, -50%)
+  top: 50%
+  left: 50%
+
+.absolute-bottom
+  @extend .absolute
+  bottom: 0
+
+.absolute-right
+  @extend .absolute
+  right: 0
+
+/* ------------------------ */
+/* h1, h2, ... h6 styles */
+/* ------------------------ */
+
+h1 
+  font-size: em(60px)
+  font-weight: 400
+
+h2 
+  font-size: em(35px)
+  font-weight: 400
+
+h3
+  font-size: em(28px)
+  font-weight: 400
+
+h4 
+  font-size: em(21px)
+  font-weight: 400
+
+h5
+  font-size: em(18px)
+  font-weight: 400
+
+/* ------------------------ */
+/* Others styles */
+/* ------------------------ */
+
+.no-wrap-space
+  white-space: nowrap
+
+a, a:active, a:hover, a:visited, a:focus
+  outline: none
+  text-decoration: none
+  text-underline: none
+
+/* ---------------------------------------------------- */
+/* Custom text styles */
+/* ---------------------------------------------------- */
+
+.big-header
+  font-size: em(126px)
+  color: $text-white
+  font-weight: bold
+  text-align: center
+  text-transform: lowercase
+  margin-top: 120px
+
+.info
+  font-size: em(21px)
+  text-align: center
+  margin-top: 70px
+  width: 100%
+
+/* ---------------------------------------------------- */
+/* Colors styles
+/* ---------------------------------------------------- */
+
+.red 
+  color: $text-red
+
+.white 
+  color: $text-white
+
+.green 
+  color: $text-green
+
+/* ---------------------------------------------------- */
+/* Buttons styles
+/* ---------------------------------------------------- */
+
+.btn
+  @include box-sizing(border-box)
+  //background-color: $bg-black
+  border: 4px solid $bg-white
+  color: $text-white
+  font-size: em(16px)
+  padding: 20px 30px
+  text-align: center
+
+  &.green
+    border-color: $border-green
+    color: $text-green
+    &:hover
+      background-color: $bg-green
+      color: $text-black
+
+.custom-button
+  @include box-sizing(border-box)
+  background-color: $bg-black
+  border: 2px solid $border-white
+  color: $text-white
+  font-size: em(21px)
+  padding: 40px 130px
+  min-width: 400px
+  text-align: center
+  display: inline
+
+  &.green
+    border: 2px solid $border-green
+    &:hover 
+      background-color: $text-green
+      color: $text-black
+    
+/* ---------------------------------------------------- */
+/* input styles
+/* ---------------------------------------------------- */
+
+$input-height: 45px
+
+
+/* ---------------------------------------------------- */
+/* Shapes styles
+/* ---------------------------------------------------- */
+
+.circle, .semi-circle
+  @include box-sizing(border-box)
+  border: 3px solid
+
+  &.green
+    border-color: $border-green
+
+.circle
+  @include aspect-ratio(1, 1)
+  @include border-radius(50%)
+
+.semi-circle
+  @include aspect-ratio(1, 2)
+  border-right: none
+
+.left-semi-circle
+  @extend .semi-circle
+  @include border-radius(2000px 0 0 2000px)

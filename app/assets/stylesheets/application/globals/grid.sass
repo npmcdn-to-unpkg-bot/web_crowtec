@@ -1,0 +1,75 @@
+/* ------------------------ */
+/* Grid settings */
+/* ------------------------ */
+
+$resolutions: mobile $mobile-width, phablet $phablet-width, tablet $tablet-width, desktop $desktop-width, desktop-hd $desktop-hd-width
+$number-columns: 12
+
+.container:after, .row:after
+  content: ""
+  clear: both
+  display: table
+
+
+div[class*="col"]
+  float: left
+  width: 100%
+
+
+@each $resolution in $resolutions
+  @media screen and (min-width: #{nth($resolution, 2)})
+    @for $i from 1 through $number-columns
+      .row
+        .col-#{nth($resolution, 1)}-#{$i}
+          width: #{(100% / $number-columns) * $i}
+        .col-#{nth($resolution, 1)}-offset-#{$i}
+          margin-left: #{(100% / $number-columns) * $i}
+
+
+/* ------------------------ */
+/* Responsive visible */
+/* ------------------------ */
+
+@each $resolution in $resolutions
+  @media screen and (min-width: #{nth($resolution, 2)})
+    .visible-#{nth($resolution, 1)}
+      display: block
+    .hidden-#{nth($resolution, 1)}
+      display: none
+
+  @each $res in $resolutions
+    @if ($res != $resolution)
+      @media screen and (min-width: #{nth($res, 2)})
+        .visible-#{nth($resolution, 1)}
+          display: none
+        .hidden-#{nth($resolution, 1)}
+          display: block
+
+
+@each $resolution in $resolutions
+  $i: index($resolutions, $resolution)
+  $length: length($resolutions)
+
+  @each $res in $resolutions
+    $j: index($resolutions, $res)
+
+    @media screen and (min-width: #{nth($res, 2)})
+      @if ($j < $i)
+        .visible-from-#{nth($resolution, 1)}
+          display: none
+
+        .hidden-from-#{nth($resolution, 1)}
+          display: block
+      @else
+        .visible-from-#{nth($resolution, 1)}
+          display: block
+
+        .hidden-from-#{nth($resolution, 1)}
+          display: none
+
+
+
+
+
+
+
