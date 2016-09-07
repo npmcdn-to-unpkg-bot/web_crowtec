@@ -1,0 +1,54 @@
+.works-grid
+  $baseWidth: 6   // 150px
+  $baseHeight: 5  //  125px
+
+  // banner-$rowsx$columns
+
+  // .grid-item-size-#{ $rows }-x-#{ $columns }
+  @for $i from 1 through 4
+    @for $j from 1 through 12
+      @media screen and (max-width: $tablet-width - 1)
+        .grid-item-mobile-size-#{$i + "x" + $j}
+          //$width: #{($j / $number_columns) * 100%}
+          @include aspect-ratio($j * $baseWidth, $i * $baseHeight)
+          //width: $width
+      @media screen and (min-width: $tablet-width) and (max-width: $desktop-width - 1)
+        .grid-item-tablet-size-#{$i + "x" + $j}
+          //$width: #{($j / $number_columns) * 100%}
+          @include aspect-ratio($j * $baseWidth, $i * $baseHeight)
+          //width: $width
+      @media screen and (min-width: $desktop-width)
+        .grid-item-desktop-size-#{$i + "x" + $j}
+          //$width: #{($j / $number_columns) * 100%}
+          @include aspect-ratio($j * $baseWidth, $i * $baseHeight)
+          //width: $width
+
+  .item-sizer
+    $width: #{(1 / $number_columns) * 100%}
+    width: $width
+
+
+
+  .grid-item
+    //background-image: url('http://i.blogs.es/580a8d/super_mario_bros_3_by_neo_musume-d7yr25q/original.jpg')
+    > .content
+      background: red
+      box-sizing: border-box
+      border: 2px solid black
+      overflow: hidden
+
+      > .image-wrapper, .color-wrapper
+        height: 100%
+        position: absolute
+        width: 100%
+
+
+
+    .image-wrapper img
+      @include translate(-50%, -50%)
+      position: absolute
+      top: 50%
+      left: 50%
+      width: 100%
+    //min-width: 100%;
+    //max-height: 100%;
