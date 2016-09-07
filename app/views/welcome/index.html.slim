@@ -1,7 +1,7 @@
 = render 'partials/application/cover'
 
 .intro-wrapper.relative
-  .container
+  .container.with-padding-until-desktop
     .row
       .col-desktop-4.col-desktop-offset-2
         .intro-content
@@ -115,12 +115,13 @@
             i.fa.fa-linkedin-square aria-hidden="true"
             i.fa.fa-facebook-official aria-hidden="true"
 
-
+    .row.relative
+      .left-semi-circle.green.col-tablet-3.col-tablet-offset-9
 
 .crows-awards-wrapper
   .container
-    .row
-      .col-tablet-offset-4.col-tablet-4.col-desktop-offset-3.col-tablet-5.text-center
+    .row.with-padding-for-mobile
+      .col-tablet-offset-2.col-tablet-8.col-desktop-offset-3.col-desktop-5.text-center
         p some awards
         .awards-slider
           section.award-item-wrapper
@@ -140,10 +141,11 @@ javascript:
     $('.awards-slider').slick({
       dots: true,
       adaptiveHeight: true,
-      autoplay: true,
+      //autoplay: true,
       autoplaySpeed: 2000,
       pauseOnDotsHover: true,
-      arrows: false
+      arrows: false,
+      mobileFirst: true
     });
   });
   /*var canvas = document.getElementById('canvas')

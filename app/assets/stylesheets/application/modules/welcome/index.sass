@@ -70,6 +70,14 @@
 
 
 .the-crows-wrapper
+  margin-bottom: 80px
+
+  .semi-circle
+    @include translateY(50%)
+    position: absolute
+    bottom: 0
+    right: 0
+
   .crow-item-wrapper
     + .crow-item-wrapper
       margin-top: 50px
@@ -124,6 +132,8 @@
 
 
 .crows-awards-wrapper
+  margin-bottom: 80px
+
   .award-item-wrapper
     .award-title
       font-size: em(45px)
@@ -131,5 +141,27 @@
 
 
 .slick-dots
+  bottom: -15px
+
   li
-    background: white
+    @include border-radius(50%)
+    @include box-sizing(border-box)
+    border: 2px solid $border-transparent-white
+    height: 10px
+    width: 10px
+
+    &.slick-active
+      border-color: $border-white
+
+    &.slick-active button, button:hover
+      background-color: $bg-red
+
+    button
+      border-radius: 50%
+      height: 6px
+      padding: 0
+      width: 6px
+
+      &:before
+        content: ''
+        display: none
