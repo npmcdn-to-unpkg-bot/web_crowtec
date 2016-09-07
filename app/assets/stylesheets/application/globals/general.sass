@@ -121,7 +121,8 @@ html, body
 
 .inline-block 
   display: inline-block
-  margin-right: -4px
+  + .inline-block
+    margin-left: -5px
 
 /* ------------------------ */
 /* Vertical align */
@@ -158,6 +159,16 @@ html, body
 
 .fixed
   position: fixed
+
+.absolute-vertical-center
+  @extend .absolute
+  @include translateY(-50%)
+  top: 50%
+
+.absolute-horizontal-center
+  @extend .absolute
+  @include translateX(-50%)
+  left: 50%
 
 .absolute-center
   @extend .absolute
@@ -205,9 +216,12 @@ h5
   white-space: nowrap
 
 a, a:active, a:hover, a:visited, a:focus
+  color: inherit
   outline: none
   text-decoration: none
-  text-underline: none
+
+img
+  width: 100%
 
 /* ---------------------------------------------------- */
 /* Custom text styles */

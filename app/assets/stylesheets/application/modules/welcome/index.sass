@@ -67,3 +67,69 @@
           line-height: em(24px)
           padding-top: 80px
           padding-bottom: 80px
+
+
+.the-crows-wrapper
+  .crow-item-wrapper
+    + .crow-item-wrapper
+      margin-top: 50px
+      @media screen and (min-width: $tablet-width)
+        @for $i from 1 through 2
+          &:nth-child(#{$i + 1})
+            @include translateY(#{-70 * $i}px)
+
+    .crow-description-wrapper
+      @media screen and (min-width: $tablet-width)
+        @include translateY(-50%)
+        position: absolute
+        top: 50%
+
+        .initial-letter
+          display: inline-block
+          font-size: 200px
+          line-height: 135px
+          margin-top: 0
+          margin-bottom: 0
+          width: 200px
+
+        @media screen and (min-width: $desktop-hd-width)
+          .initial-letter
+            display: inline-block
+            font-size: 498px
+            line-height: 348px
+            margin-top: 0
+            margin-bottom: 0
+            width: 465px
+
+      section
+        @media screen and (min-width: $tablet-width)
+          width: calc(100% - 200px)
+        @media screen and (min-width: $desktop-hd-width)
+          width: calc(100% - 465px)
+
+        .crow-name
+          font-size: em(30px)
+          margin: 1em 0
+
+          @media screen and (min-width: $tablet-width)
+            margin: 0 0 1em
+        p
+          font-size: em(16px)
+        .social-links
+          i
+            font-size: em(43px)
+
+            & + i
+              margin-left: 5px
+
+
+.crows-awards-wrapper
+  .award-item-wrapper
+    .award-title
+      font-size: em(45px)
+
+
+
+.slick-dots
+  li
+    background: white

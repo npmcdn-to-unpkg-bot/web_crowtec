@@ -2,7 +2,8 @@
 /* Grid settings */
 /* ------------------------ */
 
-$resolutions: mobile $mobile-width, phablet $phablet-width, tablet $tablet-width, desktop $desktop-width, desktop-hd $desktop-hd-width
+$resolutions: mobile $mobile-width 10px, phablet $phablet-width 10px, tablet $tablet-width 14px, desktop $desktop-width 25px, desktop-hd $desktop-hd-width 25px
+// resolution item: [ name, device-width, horizontal-padding ]
 $number-columns: 12
 
 .container:after, .row:after
@@ -25,9 +26,59 @@ div[class*="col"]
         .col-#{nth($resolution, 1)}-offset-#{$i}
           margin-left: #{(100% / $number-columns) * $i}
 
+/* ------------------------ */
+/* Padding settings */
+/* ------------------------ */
+
+[class*="with-padding"]
+  @include box-sizing(border-box)
+
+.with-padding
+  padding-left: 10px
+  padding-right: 10px
+
+  @media screen and (min-width: $tablet-width)
+    padding-left: 14px
+    padding-right: 14px
+  @media screen and (min-width: $desktop-width)
+    padding-left: 25px
+    padding-right: 25px
+
+/* From X (included X) */
+
+@each $resolution in $resolutions
+  @media screen and (min-width: #{nth($resolution, 2)})
+    .with-padding-from-#{nth($resolution, 1)}
+      padding-left: #{nth($resolution, 3)}
+      padding-right: #{nth($resolution, 3)}
+
+/* From X (not included X) */
+
+@each $resolution in reverse($resolutions)
+  @media screen and (max-width: #{nth($resolution, 2) - 1})
+    .with-padding-until-#{nth($resolution, 1)}
+      padding-left: #{nth($resolution, 3)}
+      padding-right: #{nth($resolution, 3)}
+
+/* For X (only for X) */
+
+@for $i from 1 to length($resolutions)
+  $current: nth($resolutions, $i)
+  $next: nth($resolutions, $i + 1)
+  @media screen and (min-width: #{nth($current, 2)}) and (max-width: #{nth($next, 2) - 1})
+    .with-padding-for-#{nth($current, 1)}
+      padding-left: #{nth($current, 3)}
+      padding-right: #{nth($current, 3)}
+
+$last: nth($resolutions, length($resolutions))
+@media screen and (min-width: #{nth($last, 2)})
+  .with-padding-for-#{nth($last, 1)}
+    padding-left: #{nth($last, 3)}
+    padding-right: #{nth($last, 3)}
+
 
 /* ------------------------ */
-/* Responsive visible */
+/* Responsive visibility */
 /* ------------------------ */
 
 @each $resolution in $resolutions
@@ -48,8 +99,6 @@ div[class*="col"]
 
 @each $resolution in $resolutions
   $i: index($resolutions, $resolution)
-  $length: length($resolutions)
-
   @each $res in $resolutions
     $j: index($resolutions, $res)
 

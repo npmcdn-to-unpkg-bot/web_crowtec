@@ -22,13 +22,13 @@
   h2.big-header Works
   .container
     .row.project-item-wrapper
-      .project-image-wrapper.col-desktop-7.visible-from-desktop
+      .col-desktop-7.visible-from-desktop.project-image-wrapper
         /= image_tag "https://newevolutiondesigns.com/images/freebies/city-wallpaper-47.jpg"
       .col-desktop-offset-7.col-desktop-5.text-center
         .project-description-wrapper
           section
             h2 CtOS Enabler
-            p.description
+            p.description.text-light
               |CtOS Enabler framework allows you to integrate geolocation in your apps and gain competitive advantages without headaches.
             p.red.text-light
               | #Andoid #IOS
@@ -38,15 +38,114 @@
         .project-description-wrapper
           section
             h2 CtOS Enabler
-            p.description
+            p.description.text-light
               |CtOS Enabler framework allows you to integrate geolocation in your apps and gain competitive advantages without headaches.
             p.red.text-light
               | #Andoid #IOS
           = link_to 'more info', '#', class: 'btn green block text-light'
-      .project-image-wrapper.col-desktop-7.visible-from-desktop.absolute-right
+      .col-desktop-7.visible-from-desktop.project-image-wrapper.absolute-right
+
+.the-crows-wrapper
+  h2.big-header The crows
+  .container
+    .row.crow-item-wrapper.relative
+      .col-tablet-5.col-desktop-4.crow-image-wrapper
+        = image_tag "http://art.thewalters.org/images/art/large/l_pl1_371158_fnt_tr.jpg"
+      .col-tablet-offset-3.col-tablet-9.col-desktop-6.crow-description-wrapper
+        h2.initial-letter.text-bold.text-center.vertical-top.inline-block.visible-from-tablet M
+        section.inline-block.with-padding-until-desktop
+          h4.crow-name.text-bold Mona Lisa
+          p.crow-description
+            | Music Producer, Guitarist, Singer, Composer, Synth Programmer. More than 60 albums released in over
+            | 35 countries by major labels.Singer, Composer, Synth Programmer. More than 60 albums released in over 35 countries by major labels.
+          p.contact
+            = mail_to "info@crowtec.eu", "info@crowtec.eu", class: "block"
+            = link_to "info@crowtec.eu", "info@crowtec.eu", class: "block"
+          .social-links
+            i.fa.fa-linkedin-square aria-hidden="true"
+            i.fa.fa-facebook-official aria-hidden="true"
+
+    .row.crow-item-wrapper.relative
+      .col-tablet-9.col-desktop-offset-3.col-desktop-6.crow-description-wrapper.visible-from-tablet
+        section.inline-block.with-padding-until-desktop.text-right
+          h4.crow-name.text-bold Mona Lisa
+          p.crow-description
+            | Music Producer, Guitarist, Singer, Composer, Synth Programmer. More than 60 albums released in over
+            | 35 countries by major labels.Singer, Composer, Synth Programmer. More than 60 albums released in over 35 countries by major labels.
+          p.contact
+            = mail_to "info@crowtec.eu", "info@crowtec.eu", class: "block"
+            = link_to "info@crowtec.eu", "info@crowtec.eu", class: "block"
+          .social-links
+            i.fa.fa-linkedin-square aria-hidden="true"
+            i.fa.fa-facebook-official aria-hidden="true"
+        h2.initial-letter.text-bold.text-center.vertical-top.inline-block.visible-from-tablet M
+
+      .col-tablet-offset-7.col-tablet-5.col-desktop-offset-8.col-desktop-4.crow-image-wrapper
+        = image_tag "http://art.thewalters.org/images/art/large/l_pl1_371158_fnt_tr.jpg"
+
+
+      .col-mobile-12.hidden-from-tablet
+        section.inline-block.with-padding-until-desktop
+          h4.crow-name.text-bold Mona Lisa
+          p.crow-description
+            | Music Producer, Guitarist, Singer, Composer, Synth Programmer. More than 60 albums released in over
+            | 35 countries by major labels.Singer, Composer, Synth Programmer. More than 60 albums released in over 35 countries by major labels.
+          p.contact
+            = mail_to "info@crowtec.eu", "info@crowtec.eu", class: "block"
+            = link_to "info@crowtec.eu", "info@crowtec.eu", class: "block"
+          .social-links
+            i.fa.fa-linkedin-square aria-hidden="true"
+            i.fa.fa-facebook-official aria-hidden="true"
+        h2.initial-letter.text-bold.text-center.vertical-top.inline-block.visible-from-tablet M
+
+    .row.crow-item-wrapper.relative
+      .col-tablet-5.col-desktop-4.crow-image-wrapper
+        = image_tag "http://art.thewalters.org/images/art/large/l_pl1_371158_fnt_tr.jpg"
+      .col-tablet-offset-3.col-tablet-9.col-desktop-6.crow-description-wrapper
+        h2.initial-letter.text-bold.text-center.vertical-top.inline-block.visible-from-tablet M
+        section.inline-block.with-padding-until-desktop
+          h4.crow-name.text-bold Mona Lisa
+          p.crow-description
+            | Music Producer, Guitarist, Singer, Composer, Synth Programmer. More than 60 albums released in over
+            | 35 countries by major labels.Singer, Composer, Synth Programmer. More than 60 albums released in over 35 countries by major labels.
+          p.contact
+            = mail_to "info@crowtec.eu", "info@crowtec.eu", class: "block"
+            = link_to "info@crowtec.eu", "info@crowtec.eu", class: "block"
+          .social-links
+            i.fa.fa-linkedin-square aria-hidden="true"
+            i.fa.fa-facebook-official aria-hidden="true"
+
+
+
+.crows-awards-wrapper
+  .container
+    .row
+      .col-tablet-offset-4.col-tablet-4.col-desktop-offset-3.col-tablet-5.text-center
+        p some awards
+        .awards-slider
+          section.award-item-wrapper
+            h2.award-title.text-bold "Traity Weekend of Code, best project prize"
+            p.award-for.green.text-light for CtOS Enabled
+          section.award-item-wrapper
+            h2.award-title.text-bold "Sopra"
+            p.award-for.green.text-light for CtOS Enabled
+          section.award-item-wrapper
+            h2.award-title.text-bold "Traity Weekend of Code, best project prize"
+
+
 
 
 javascript:
+  $(function () {
+    $('.awards-slider').slick({
+      dots: true,
+      adaptiveHeight: true,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      pauseOnDotsHover: true,
+      arrows: false
+    });
+  });
   /*var canvas = document.getElementById('canvas')
           , context = canvas.getContext('2d')
           , img = new Image()
