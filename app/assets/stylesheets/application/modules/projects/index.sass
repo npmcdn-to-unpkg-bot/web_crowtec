@@ -1,12 +1,17 @@
-.works-grid
-  $baseWidth: 6   // 150px
-  $baseHeight: 5  //  125px
+.grid
+  $baseWidth: 3   // 150px
+  $baseHeight: 5  //  250px
 
   // banner-$rowsx$columns
 
   // .grid-item-size-#{ $rows }-x-#{ $columns }
   @for $i from 1 through 4
     @for $j from 1 through 12
+      .grid-item-size-#{$i + "x" + $j}
+        //$width: #{($j / $number_columns) * 100%}
+        @include aspect-ratio($j * $baseWidth, $i * $baseHeight)
+        //width: $width
+
       @media screen and (max-width: $tablet-width - 1)
         .grid-item-mobile-size-#{$i + "x" + $j}
           //$width: #{($j / $number_columns) * 100%}
@@ -17,34 +22,59 @@
           //$width: #{($j / $number_columns) * 100%}
           @include aspect-ratio($j * $baseWidth, $i * $baseHeight)
           //width: $width
+
+      // ONLY USE THIS!
       @media screen and (min-width: $desktop-width)
         .grid-item-desktop-size-#{$i + "x" + $j}
           //$width: #{($j / $number_columns) * 100%}
           @include aspect-ratio($j * $baseWidth, $i * $baseHeight)
           //width: $width
 
-  .item-sizer
-    $width: #{(1 / $number_columns) * 100%}
-    width: $width
-
-
-
   .grid-item
-    //background-image: url('http://i.blogs.es/580a8d/super_mario_bros_3_by_neo_musume-d7yr25q/original.jpg')
-    > .content
-      background: red
-      box-sizing: border-box
-      border: 2px solid black
+    @include box-sizing(border-box)
+
+    .content
+      margin: 5px
+      max-height: calc(100vh - 20px)
       overflow: hidden
 
-      > .image-wrapper, .color-wrapper
+      img.sizer
+        visibility: hidden
+        width: 100%
+
+      @media screen and (max-width: $desktop-width - 1)
+        position: relative
+
+      @media screen and (min-width: $desktop-width)
+        margin: 10px
+        max-height: none
+
+        img.sizer
+          display: none
+
+      .image-wrapper
+        @include transition(all 250ms ease-in)
+        background-position: center center
+        background-repeat: no-repeat
+        background-size: cover
+
+    &:hover
+      .image-wrapper
+        //@include filter(blur(5px) grayscale(100%))
+        @include filter(blur(5px))
+        @include transform(scale(1.2))
+        //height: auto
+        //top: 5px
+        //left: 5px
+        //right: 5px
+        //bottom: 5px
+        //width: auto
+      //.image-wrapper
         height: 100%
         position: absolute
         width: 100%
 
-
-
-    .image-wrapper img
+    //.image-wrapper img
       @include translate(-50%, -50%)
       position: absolute
       top: 50%
@@ -52,3 +82,74 @@
       width: 100%
     //min-width: 100%;
     //max-height: 100%;
+
+.works-grid
+  margin: 5px
+
+  @media screen and (min-width: $desktop-width)
+    margin: 10px
+
+  .grid-item:hover
+    .work-description-wrapper
+      @include transition(visibility 300ms ease-in)
+      visibility: visible
+
+  .work-description-wrapper
+    visibility: hidden
+
+    .background
+      @include transparent-background-color($bg-transparent-red)
+
+    section
+      @include translate(-50%, -50%)
+      max-width: 96%
+      min-width: 80%
+      position: absolute
+      top: 50%
+      left: 50%
+
+      @media screen and (min-width: $desktop-hd-width)
+        //top: 40%
+
+      h2.work-headline
+        font-size: em(60px)
+        margin-top: 0
+        margin-bottom: 0.25em
+
+        @media screen and (min-width: $desktop-hd-width)
+          font-size: em(130px)
+      
+      p.work-description
+        color: $text-transparent-white
+        line-height: em(24px)
+
+      .work-tags
+        color: $text-white
+        font-size: em(18px)
+        line-height: em(24px)
+
+
+.works-headline
+  @include box-sizing(border-box)
+  border: solid 20px $border-red
+
+  h1
+    font-size: em(26px)
+    line-height: 42px
+    letter-spacing: em(20px)
+    margin-top: 2em
+    margin-bottom: 2em
+    margin-right: em(-20px)
+    //margin: 0
+    //width: 23px
+    //word-wrap: break-word
+
+  span
+    font-size: em(26px)
+    line-height: 42px
+
+    @media screen and (min-width: $desktop-hd-width)
+      line-height: 50px
+
+
+

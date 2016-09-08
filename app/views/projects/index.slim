@@ -1,23 +1,135 @@
-.works-grid
+.grid.works-grid
   .row
-    .grid-sizer.col-mobile-12.col-tablet-4.col-desktop-1
-    .grid-item.col-mobile-12.col-tablet-8.col-desktop-5.grid-item-mobile-size-1x12.grid-item-tablet-size-2x8.grid-item-desktop-size-2x5
+    /
+      .grid-sizer.col-mobile-12.col-tablet-4.col-desktop-1
+      .grid-item.col-mobile-12.col-tablet-8.col-desktop-5.grid-item-mobile-size-1x12.grid-item-tablet-size-2x8.grid-item-desktop-size-2x5
+        .content
+      /tablet hay que especificar algo y ancho!
+      .grid-item.col-mobile-12.col-tablet-4.col-desktop-2.grid-item-mobile-size-3x12.grid-item-tablet-size-2x4.grid-item-desktop-size-1x2
+        .content
+      / mobile siempre varía el height (rows) las columnas son las mismas siempre 12!
+      .grid-item.col-mobile-12.col-tablet-4.col-desktop-5.grid-item-mobile-size-4x12.grid-item-tablet-size-2x8.grid-item-desktop-size-2x5
+        .content
+      /.grid-item.col-mobile-12.col-tablet-4.col-desktop-7.grid-item-height-4
+        .content
+
+    .grid-sizer.col-mobile-12.col-desktop-1
+
+    .grid-item.col-mobile-12.hidden-from-desktop
+      .content.works-headline
+        h1.bold.red.text-center works
+
+    .grid-item.col-mobile-12.col-desktop-5.grid-item-desktop-size-2x5.hidden
       .content
+        = image_tag 'http://media.androidphoria.com/wp-content/uploads/fondo-uvas.png?f93355', class: 'sizer'
+        .image-wrapper.work-image-wrapper.absolute-full-size style="background-image: url('http://media.androidphoria.com/wp-content/uploads/fondo-uvas.png?f93355');"
+        .work-description-wrapper
+          .background.absolute-full-size
+          section.text-center
+            h2.work-headline.text-bold CtOS
+            p.work-description CtOS Enabler framework allows you to integrate geolocation in your apps and gain competitive advantages without headaches.
+            .work-tags.text-light
+              = link_to "#Andoid" "#"
+              =< link_to "#iOS" "#"
+
+    .grid-item.col-desktop-2.grid-item-desktop-size-2x2.visible-from-desktop
+      .content.works-headline
+        .bold.red.absolute-center
+          span.block.text-center w
+          span.block.text-center o
+          span.block.text-center r
+          span.block.text-center k
+          span.block.text-center s
+        //= image_tag 'http://kennedyssandiego.com/wp-content/uploads/2015/01/food1-1280x847.jpg', class: 'sizer'
+
+    .grid-item.col-mobile-12.col-desktop-5.grid-item-desktop-size-4x5.hidden
+      .content
+        = image_tag 'http://www.splendidwallpaper.com/wp-content/uploads/assassins_creed_3_wallpaper-800x1280.jpg', class: 'sizer'
+        .image-wrapper.work-image-wrapper.absolute-full-size style="background-image: url('http://www.splendidwallpaper.com/wp-content/uploads/assassins_creed_3_wallpaper-800x1280.jpg');"
+        .work-description-wrapper
+          .background.absolute-full-size
+          section.text-center
+            h2.work-headline.text-bold CtOS
+            p.work-description CtOS Enabler framework allows you to integrate geolocation in your apps and gain competitive advantages without headaches.
+            .work-tags.text-light
+              = link_to "#Andoid" "#"
+              =< link_to "#iOS" "#"
+
+    .grid-item.col-mobile-12.col-desktop-7.grid-item-desktop-size-4x7.hidden
+      .content
+        = image_tag 'http://thinkeando.com/wp-content/uploads/2016/01/photo-1425315283416-2acc50323ee6.jpeg', class: 'sizer'
+        .image-wrapper.work-image-wrapper.absolute-full-size style="background-image: url('http://thinkeando.com/wp-content/uploads/2016/01/photo-1425315283416-2acc50323ee6.jpeg');"
+        .work-description-wrapper
+          .background.absolute-full-size
+          section.text-center
+            h2.work-headline.text-bold CtOS
+            p.work-description CtOS Enabler framework allows you to integrate geolocation in your apps and gain competitive advantages without headaches.
+            .work-tags.text-light
+              = link_to "#Andoid" "#"
+              =< link_to "#iOS" "#"
+
+    .grid-item.col-mobile-12.col-desktop-5.grid-item-desktop-size-2x5.hidden
+      .content
+        = image_tag 'http://www.missionmenus.com/images/recipes/304/mission_bakedtaquitos_4197.jpg', class: 'sizer'
+        .image-wrapper.work-image-wrapper.absolute-full-size style="background-image: url('http://www.missionmenus.com/images/recipes/304/mission_bakedtaquitos_4197.jpg');"
+        .work-description-wrapper
+          .background.absolute-full-size
+          section.text-center
+            h2.work-headline.text-bold CtOS
+            p.work-description CtOS Enabler framework allows you to integrate geolocation in your apps and gain competitive advantages without headaches.
+            .work-tags.text-light
+              = link_to "#Andoid" "#"
+              =< link_to "#iOS" "#"
+
+    .grid-item.col-mobile-12.col-desktop-5.grid-item-desktop-size-2x5.hidden
+      .content
+        = image_tag 'http://kennedyssandiego.com/wp-content/uploads/2015/01/food1-1280x847.jpg', class: 'sizer'
+        .image-wrapper.work-image-wrapper.absolute-full-size style="background-image: url('http://kennedyssandiego.com/wp-content/uploads/2015/01/food1-1280x847.jpg');"
+        .work-description-wrapper
+          .background.absolute-full-size
+          section.text-center
+            h2.work-headline.text-bold CtOS
+            p.work-description CtOS Enabler framework allows you to integrate geolocation in your apps and gain competitive advantages without headaches.
+            .work-tags.text-light
+              = link_to "#Andoid" "#"
+              =< link_to "#iOS" "#"
+    .grid-item.col-mobile-12.col-desktop-7.grid-item-desktop-size-2x7.hidden
+      .content
+        = image_tag 'http://conference.cityminded.org/wp-content/uploads/2015/09/City-Morning.jpg', class: 'sizer'
+        .image-wrapper.work-image-wrapper.absolute-full-size style="background-image: url('http://conference.cityminded.org/wp-content/uploads/2015/09/City-Morning.jpg');"
+        .work-description-wrapper
+          .background.absolute-full-size
+          section.text-center
+            h2.work-headline.text-bold CtOS
+            p.work-description CtOS Enabler framework allows you to integrate geolocation in your apps and gain competitive advantages without headaches.
+            .work-tags.text-light
+              = link_to "#Andoid" "#"
+              =< link_to "#iOS" "#"
     /tablet hay que especificar algo y ancho!
-    .grid-item.col-mobile-12.col-tablet-4.col-desktop-2.grid-item-mobile-size-3x12.grid-item-tablet-size-2x4.grid-item-desktop-size-1x2
+    /.grid-item.col-mobile-12.col-desktop-2.grid-item-size-3x2
       .content
     / mobile siempre varía el height (rows) las columnas son las mismas siempre 12!
-    .grid-item.col-mobile-12.col-tablet-4.col-desktop-5.grid-item-mobile-size-4x12.grid-item-tablet-size-2x8.grid-item-desktop-size-2x5
+    /.grid-item.col-mobile-12.col-desktop-5.grid-item-size-4x5
       .content
     /.grid-item.col-mobile-12.col-tablet-4.col-desktop-7.grid-item-height-4
-      .content
-
+        .content
 
 javascript:
   $(function () {
-    $('.works-grid').masonry({
+    var $grid = $('.works-grid').masonry({
       itemSelector: '.grid-item', // use a separate class for itemSelector, other than .col-
       columnWidth: '.grid-sizer',
       percentPosition: true
     });
+
+    // layout Masonry after each image loads
+    $grid.imagesLoaded({ background: '.grid-item .work-image-wrapper' })
+            .progress(function (instance, image) {
+              //console.log(instance);
+              //console.log(image.element);
+
+              $(image.element).closest('.grid-item').fadeIn();
+              $grid.masonry('layout');
+            }
+    );
   });
