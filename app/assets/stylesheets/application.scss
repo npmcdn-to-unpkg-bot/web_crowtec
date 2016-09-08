@@ -8,9 +8,10 @@
 @import "application/globals/grid";
 
 @import "application/modules/form";
-@import "application/modules/partials/*";
-@import "application/modules/welcome/*";
-@import "application/modules/projects/index";
+@import "application/views/partials/*";
+@import "application/views/welcome/*";
+@import "application/views/projects/index";
+@import "application/views/awards/index";
 
 
 

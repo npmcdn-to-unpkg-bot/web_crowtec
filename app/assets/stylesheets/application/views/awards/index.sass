@@ -1,0 +1,71 @@
+.awards-grid
+  margin: 5px
+
+  @media screen and (min-width: $desktop-width)
+    margin: 10px
+
+  .content
+    @include transition(background-color 300ms ease-in)
+    border: 1px solid $border-white
+    padding: 10px
+    padding-bottom: 45px !important
+
+    @media screen and (min-width: $desktop-hd-width)
+      padding: 20px
+
+    @media screen and (max-width: $tablet-width - 1)
+      position: relative
+
+    &:hover
+      background-color: $bg-green
+      border-color: $border-green
+
+      h2.award-title
+        color: $text-black
+
+      .award-for-project
+        font-weight: 700
+
+      .award-read-more
+        @include rotateY(180deg)
+        &:before, &:after
+          background-color: $bg-black
+
+    h2.award-title
+      @include transition(color 300ms ease-in)
+      font-size: rem(33px)
+      margin: 0
+      max-width: 280px
+
+    .award-for-project
+      @include transition(font-weight 300ms ease-in)
+      font-size: rem(18px)
+      position: absolute
+      bottom: 10px
+
+    .award-read-more
+      @include transition(transform 300ms ease-in)
+      height: 22px
+      position: absolute
+      bottom: 14px
+      right: 14px
+      width: 22px
+
+      &:before, &:after
+        @include transition(background-color 1ms linear 150ms)
+        background-color: $bg-white
+        content: ''
+        position: absolute
+
+      &:before
+        @include translateX(-50%)
+        height: 22px
+        left: 50%
+        width: 4px
+
+      &:after
+        @include translateY(-50%)
+        height: 4px
+        top: 50%
+        width: 22px
+
