@@ -1,4 +1,52 @@
-.grid.works-grid
+.grid.awards-grid
+  .row
+    .grid-sizer.col-mobile-12.col-tablet-6.col-desktop-1
+
+    /.grid-item.col-mobile-12.hidden-from-desktop
+      .content.works-headline
+        h1.bold.red.text-center works
+
+    .grid-item.col-mobile-12.col-tablet-6.col-desktop-6.grid-item-tablet-size-2x6.grid-item-desktop-size-2x6
+      .content
+        h2.award-title.text-bold Traity Weekend of Code, best project prize
+        .award-for-project.red CtOS Enabler
+        .award-read-more
+
+    .grid-item.col-mobile-12.col-tablet-6.col-desktop-3.grid-item-tablet-size-4x6.grid-item-desktop-size-4x3
+      .content
+        h2.award-title.text-bold Traity Weekend
+        .award-for-project.red CtOS Enabler
+        .award-read-more
+
+    .grid-item.col-mobile-12.col-tablet-6.col-desktop-3.grid-item-tablet-size-2x6.grid-item-desktop-size-2x3
+      .content
+        h2.award-title.text-bold Traity Weekend of Code
+        .award-for-project.red CtOS Enabler
+        .award-read-more
+
+    .grid-item.col-mobile-12.col-tablet-6.col-desktop-6.grid-item-tablet-size-2x6.grid-item-desktop-size-2x6
+      .content
+        h2.award-title.text-bold PwC
+        .award-for-project.red CtOS Enabler
+        .award-read-more
+
+    .grid-item.col-mobile-12.col-tablet-6.col-desktop-3.grid-item-tablet-size-2x6.grid-item-desktop-size-2x3
+      .content
+        h2.award-title.text-bold PwC
+        .award-for-project.red CtOS Enabler
+        .award-read-more
+        /= image_tag 'http://media.androidphoria.com/wp-content/uploads/fondo-uvas.png?f93355', class: 'sizer'
+        /.image-wrapper.work-image-wrapper.absolute-full-size style="background-image: url('http://media.androidphoria.com/wp-content/uploads/fondo-uvas.png?f93355');"
+        /.work-description-wrapper
+          .background.absolute-full-size
+          section.text-center
+            h2.work-headline.text-bold CtOS
+            p.work-description CtOS Enabler framework allows you to integrate geolocation in your apps and gain competitive advantages without headaches.
+            .work-tags.text-light
+              = link_to "#Andoid" "#"
+              =< link_to "#iOS" "#"
+
+/.grid.works-grid
   .row
     /
       .grid-sizer.col-mobile-12.col-tablet-4.col-desktop-1
@@ -132,4 +180,10 @@ javascript:
               $grid.masonry('layout');
             }
     );
+
+    var $grid1 = $('.awards-grid').masonry({
+      itemSelector: '.grid-item', // use a separate class for itemSelector, other than .col-
+      columnWidth: '.grid-sizer',
+      percentPosition: true
+    });
   });
